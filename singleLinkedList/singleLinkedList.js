@@ -16,8 +16,11 @@ class SinglyLinkedList{
 
 
   // 인스턴스 메소드 push()
-  //새로운 node를 생성 후 head(시작노드)가 없으면 head과 tail에 해당 노드를 가르키게 한다.
-  //새로운 node를 생성 후 head(시작노드)가 있다면 현재 tail의 next가 새로운 노드를 가르킴 + 현재 tail은 새로운 노드가 됨
+  //새로운 node를 생성 후 head(시작노드)가 없으면
+  //1.head과 tail에 해당 노드를 가르키게 한다.
+  //새로운 node를 생성 후 head(시작노드)가 있다면
+  //1.현재 tail의 next가 새로운 노드를 가르킴 
+  //2.현재 tail은 새로운 노드가 됨
   push(val){ 
       const newNode = new Node(val);
       if(!this.head){
@@ -36,7 +39,7 @@ class SinglyLinkedList{
   //newTail과 current 두 변수로 노드를 따라간다.
   //current이 마지막 노드가 될때 newTail은 항상 그 전 노드가 된다. 마지막노드와의 연결을 끊고 새로운 노드가 tail이 된다.
   pop(){
-  if(!this.head) return undefined;//리스트에 노드가 하나도 없는 경우 undefiend 리턴
+    if(!this.head) return undefined;//리스트에 노드가 하나도 없는 경우 undefiend 리턴
     let current = this.head;
     let newTail = current;
     
